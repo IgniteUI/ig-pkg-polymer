@@ -1,1 +1,12 @@
-.sass-cache
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+node_modules
+lib
+polymer
+src/elements

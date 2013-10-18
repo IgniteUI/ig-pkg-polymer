@@ -1,0 +1,30 @@
+{
+  "name": "ig-pkg-polymer",
+  "description": "Polymer package for the Infragistics Web Designer.",
+  "homepage": "https://github.com/IgniteUI/ig-pkg-polymer",
+  "keywords": [
+    "IgniteUI",
+    "web designer"
+  ],
+  "author": {
+    "name": "Infragistics",
+    "email": "igniteui@infragistics.com"
+  },
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "build",
+    "speed",
+    "test",
+    "*.md",
+    "AUTHORS.txt",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "polymer": "~0.0.20131010",
+    "polymer-ui-elements": "~0.0.20131010"
+  }
+}
