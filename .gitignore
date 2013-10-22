@@ -10,3 +10,4 @@ node_modules
 lib
 polymer
 src/elements
+src/js/polymer.min.js

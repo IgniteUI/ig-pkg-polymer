@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     var packageConfig = {
         src: 'src',
         libs: 'lib',
-        dist: 'polymer',
+        dist: '../web-designer/lib/packages/polymer',
         name: 'polymer'
     };
 
@@ -176,13 +176,23 @@ module.exports = function (grunt) {
                     cwd: '<%= pkg.src %>',
                     dest: '<%= pkg.dist %>',
                     src: [
-                        '*.{ico,txt}',
-                        '.htaccess',
+                        '<%= pkg.name %>.js',
+                        'css/**',
                         'elements/**',
-                        'lib-elements/**',
-                        'images/{,*/}*.{webp,gif}'
+                        'icons/**',
+                        'js/**',
+                        'metadata/**',
+                        // '*.{ico,txt}',
+                        // '.htaccess',
+                        // 'elements/**',
+                        // 'lib-elements/**',
+                        // 'images/{,*/}*.{webp,gif}'
                     ]
                 }]
+            },
+            polymer: {
+                src: '<%= pkg.libs %>/bower_components/polymer/polymer.min.js',
+                dest: '<%= pkg.src %>/js/polymer.min.js'
             },
             elements: {
                 files: [{
@@ -213,6 +223,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'clean:elements',
+            'copy:polymer',
             'copy:elements',
             
             'connect:livereload',
@@ -225,6 +236,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', [
         'clean:server',
         'clean:elements',
+        'copy:polymer',
         'copy:elements',
         
         
@@ -235,20 +247,21 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'clean:elements',
+        'copy:polymer',
         'copy:elements',
         
-        'useminPrepare',
-        'imagemin',
-        'htmlmin',
-        'concat',
-        'cssmin',
-        'uglify',
+        //'useminPrepare',
+        //'imagemin',
+        //'htmlmin',
+        //'concat',
+        //'cssmin',
+        //'uglify',
         'copy',
-        'usemin'
+        //'usemin'
     ]);
 
     // here we're pulling in the necessary code to use the elements in the package
-    grunt.registerTask('copy-elements', ['clean:elements', 'copy:elements']);
+    grunt.registerTask('copy-elements', ['clean:elements', 'copy:polymer', 'copy:elements']);
 
     grunt.registerTask('default', [
         'jshint',
