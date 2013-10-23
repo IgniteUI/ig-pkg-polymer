@@ -30,7 +30,7 @@ define (["require", "exports", "module", "ide-codeproviderbase", "jquery"], func
       var head = $('head'), componentTag;
       if (head) {
         componentTag = $('head > #' + id);
-        if (!componentTag) {
+        if (componentTag.length == 0) {
           head.append('<link id="' + id + '" rel="import" href="packages/polymer/elements/polymer-ui-elements/' + id + '/' + id + '.html">');
         }
       }
