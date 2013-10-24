@@ -8,6 +8,6 @@
 
 node_modules
 lib
-polymer
+dist
 src/elements
 src/js/polymer.min.js

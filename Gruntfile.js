@@ -20,7 +20,7 @@ module.exports = function (grunt) {
     var packageConfig = {
         src: 'src',
         libs: 'lib',
-        dist: '../web-designer/lib/packages/polymer',
+        dist: 'dist',
         name: 'polymer'
     };
 
@@ -174,19 +174,14 @@ module.exports = function (grunt) {
                     expand: true,
                     dot: true,
                     cwd: '<%= pkg.src %>',
-                    dest: '<%= pkg.dist %>',
+                    dest: '<%= pkg.dist %>/<%= pkg.name %>',
                     src: [
                         '<%= pkg.name %>.js',
                         'css/**',
                         'elements/**',
                         'icons/**',
                         'js/**',
-                        'metadata/**',
-                        // '*.{ico,txt}',
-                        // '.htaccess',
-                        // 'elements/**',
-                        // 'lib-elements/**',
-                        // 'images/{,*/}*.{webp,gif}'
+                        'metadata/**'
                     ]
                 }]
             },
