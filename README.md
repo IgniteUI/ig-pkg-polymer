@@ -6,7 +6,7 @@ Polymer Package for Infragistics Web Designer
 # To get set up using this with the Web Designer project..
 
 1. Go to web-designer, master branch. Pull latest.
-2. It should have this repo as a git submodule.  Then in that repo (`cd <web-designer-root>/modules/polymer` and run `git submodule init` and then `git submodule update` ([see here for more info](http://joncairns.com/2011/10/how-to-use-git-submodules/#cloning)).
+2. It should have this repo as a git submodule; run `git submodule init`.  Then in that repo (`cd <web-designer-root>/modules/polymer` then `git submodule update` ([see here for more info](http://joncairns.com/2011/10/how-to-use-git-submodules/#cloning)).
 3. Go to `cd <web-designer root>/modules/polymer` (where the repo should be added as a submodule).
 4. Run `npm install`; this should get all package dependencies.
 5. Run `grunt build`; this should prep your package for use.
