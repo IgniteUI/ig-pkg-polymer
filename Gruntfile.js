@@ -38,9 +38,8 @@ module.exports = function (grunt) {
                 },
                 files: [
                     '<%= pkg.src %>/index.html',
-                    '<%= pkg.src %>/<%= pkg.name %>.js',
+                    '<%= pkg.src %>/designer/{,*/}*.*',
                     '<%= pkg.src %>/elements/**/*.html',
-                    '{.tmp,<%= pkg.src %>}/css/{,*/}*.css',
                     '{.tmp,<%= pkg.src %>}/js/{,*/}*.js',
                     '<%= pkg.src %>/img/{,*/}*.{png,jpg,jpeg,gif,webp}'
                 ]
@@ -176,7 +175,7 @@ module.exports = function (grunt) {
                     cwd: '<%= pkg.src %>',
                     dest: '<%= pkg.dist %>/<%= pkg.name %>',
                     src: [
-                        '<%= pkg.name %>.js',
+                        'designer/{,*/}*.*',
                         'css/**',
                         'elements/**',
                         'icons/**',
