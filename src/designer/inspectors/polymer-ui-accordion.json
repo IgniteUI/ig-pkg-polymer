@@ -1,0 +1,12 @@
+// Information used to enable editing of a component in the designer.
+{
+  "events": {
+  
+  },
+  "properties": {
+    "columnSpan": {
+      "type": "number",
+      "defaultValue": 4
+    }
+  }
+}

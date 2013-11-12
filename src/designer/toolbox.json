@@ -1,0 +1,27 @@
+{
+  "name": "polymer",
+  "toolboxTitle": "Polymer UI",
+  "scripts": [
+    "../js/polymer.min.js"
+  ],
+  "stylesheets": [],
+  "iconsPath": "icons",
+  "inspectorsPath": "inspectors",
+  "codeTemplatesPath": "templates",
+  "codeProvidersPath": "providers",
+  "defaultCodeProvider": "_default",
+  "components": {
+      "polymer-ui-accordion": {
+        "id": "polymer-ui-accordion",
+        "name": "Accordion",
+        "overview": null,
+        "icon": "",
+        "dragDropIcon": "",
+        "category": "elements",
+        "visual": true,
+        "framework": false,
+        "width": "100%",
+        "height": "auto"
+      }
+  }
+}
