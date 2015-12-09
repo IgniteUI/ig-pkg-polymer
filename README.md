@@ -1,9 +1,9 @@
-ig-pkg-polymer
+Ignite UI Page Designer Polymer Toolbox Package
 ==============
 
-Polymer Package for Infragistics Web Designer
+Polymer Package for the Ignite UI Page Designer
 
-# To get set up using this with the Web Designer project..
+# To get set up using this with the Page Designer project..
 
 1. Go to web-designer, master branch. Pull latest.
 2. It should have this repo as a git submodule; run `git submodule init` and `git submodule update` ([see here for more info](http://joncairns.com/2011/10/how-to-use-git-submodules/#cloning)).
@@ -15,6 +15,3 @@ Polymer Package for Infragistics Web Designer
 You should now see the Polymer UI package in the IDE. You can work on both the web-designer and ig-pkg-polymer repos independently. Git treats submodules as their own repos. 
 
 ig-pkg-polymer is just on master for now. 
-
-# Q&A
-Put your questions here, and I can answer them.
